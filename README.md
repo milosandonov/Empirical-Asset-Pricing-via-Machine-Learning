@@ -115,12 +115,6 @@ Elastic Net and Random Forest use `TimeSeriesSplit(n_splits=5)` inside `GridSear
 
 The dataset is **not included** in this repository due to size (~4GB) and WRDS licensing.
 
-**To obtain the data:**
-1. Create an account at [WRDS (Wharton Research Data Services)](https://wrds-www.wharton.edu/)
-2. Access the Gu et al. (2020) replication dataset — the `datashare` file is available directly from the authors: [https://dachxiu.chicagobooth.edu/#rp](https://dachxiu.chicagobooth.edu/#rp)
-3. Download `datashare.csv` and place it in a `data/` folder in the project root
-4. The PERMNO mapping (`permno_data.csv`) can be constructed from CRSP's `dsenames` table
-
 ---
 
 ## Requirements
