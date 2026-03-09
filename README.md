@@ -30,25 +30,26 @@ $$R^2_{OOS} = 1 - \frac{MSE_{model}}{MSE_{benchmark}}$$
 
 where the benchmark is the historical mean return predictor (Campbell & Thompson, 2008).
 
-### Main Period (Train: 2010–2017 | Test: 2020–2021)
+### Main Period (Train: 2010–2017 | Val: 2018–2019 | Test: 2020–2021)
 
 | Model | Val R²_OOS | Test R²_OOS |
 |---|---|---|
-| Elastic Net | *see notebook* | *see notebook* |
-| PCR | *see notebook* | *see notebook* |
-| Random Forest | *see notebook* | *see notebook* |
-| Neural Network | *see notebook* | *see notebook* |
+| Elastic Net | +0.00374 | -0.00162 |
+| PCR | +0.00342 | -0.00203 |
+| Random Forest | +0.00338 | -0.00913 |
+| Neural Network | +0.00678 | -0.00466 |
 
-### Robustness Check: Pre-COVID Period (Train: 2011–2015 | Test: 2018)
+### Robustness Check: Pre-COVID vs COVID Period
 
-| Model | Pre-COVID R²_OOS | COVID-period R²_OOS |
+| Model | Pre-COVID R²_OOS (2018) | COVID-period R²_OOS (2020–21) |
 |---|---|---|
-| Elastic Net | *see notebook* | *see notebook* |
-| PCR | *see notebook* | *see notebook* |
-| Random Forest | *see notebook* | *see notebook* |
-| Neural Network | *see notebook* | *see notebook* |
+| Elastic Net | +0.00000 | -0.00162 |
+| PCR | +0.00731 | -0.00203 |
+| Random Forest | +0.01095 | -0.00913 |
+| Neural Network | +0.00475 | -0.00466 |
 
-> **Key finding:** All models achieved positive R²_OOS in stable market conditions (2018), consistent with Gu et al. Performance deteriorated significantly during COVID-19 (2020–2021), reflecting the breakdown of historical factor relationships under extreme market stress — a regime-shift effect not present in the training data.
+> **Average Pre-COVID R²_OOS: +0.0058 | Average COVID R²_OOS: −0.0044**
+> MSE increased 101.5% from pre-COVID to COVID period, confirming significant regime shift.
 
 ---
 
